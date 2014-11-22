@@ -26,7 +26,7 @@ def choose_pivot(A, l, r, pivot_type):
     elif pivot_type == 'last':
         return r
     elif pivot_type == 'median_of_three':
-        m = (r-l)/2
+        m = (r-l)/2+l
         return [l,m,r][middle(A[l], A[m], A[r])]
     else:
         print 'Pivot type %s not recognized'%pivot_type
